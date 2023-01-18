@@ -1,0 +1,6 @@
+my_name = input("Ваше имя:" )
+year_of_birth = input('Год рождения: ')
+object = input('Ваш предмет: ')
+age = 2022 - int(year_of_birth)
+print(type(my_name), type(year_of_birth), type(age), type(object))
+print(f"Меня зовут {my_name}, мне {age} лет. Мой выбранный предмет - {object}! ")
