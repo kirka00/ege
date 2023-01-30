@@ -86,4 +86,31 @@ for a in range(1, 100):
         print(a)
         break'''
 
-
+'''
+for a in range(50):
+	for b in range(50):
+		for c in range(50):
+			s = '0' + a * '1' + b * '2' + c * '3' + '0'
+			while '00' not in s:
+				s = s.replace('01', '210', 1)
+				s = s.replace('02', '3101', 1)
+				s = s.replace('03', '2012', 1)
+			if s.count('1') == 111 and s.count('2') == 101 and s.count('3') == 35:
+				print(a + b + c + 2)
+				break
+'''
+'''
+k = set()
+for i in range(1, 1000):
+    s = bin(i)[2:]
+    if s.count('1') % 2 == 0:
+        s += '0'
+    else:
+        s += '1'
+    if s.count('1') % 2 == 0:
+        s += '0'
+    else:
+        s += 1
+    if int(s, 2) < 50:
+        k.add(s)
+print(len(k))'''
