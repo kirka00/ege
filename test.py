@@ -38,8 +38,3 @@ def f(n, m):
 
 def x(s, d):
         return s + d > 0
-
-for a in range(1, 1000):
-	if all(f((n, m) for x in range(1, 1000)):
-		print(a)
-		break
