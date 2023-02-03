@@ -1,3 +1,11 @@
+
+print(int(input()) % 4)
+
+print()
+print()
+print()
+
+
 def f(x, y):  # 6
     if x < y:
         return 0
