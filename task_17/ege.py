@@ -7,4 +7,4 @@ with open('task_17/files/17-304.txt') as f:
 			n.append(s[i] + s[i + 1])
 print(len(n), min(n))
 print('-----------')
-print('1234'[1:-1:2])
+print('1234'[0::2])

@@ -1,4 +1,4 @@
-with open('task_17/files/17-4.txt') as f:
+with open('task_17/files/17-205.txt') as f:
 	s = [int(x) for x in f]
 	n = []
 	for i in range(len(s) - 1):
