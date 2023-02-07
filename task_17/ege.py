@@ -1,10 +1,15 @@
-with open('task_17/files/17-304.txt') as f:
+def ff(a, fun):
+		return [fun(k) for k in a].count(True)
+
+
+with open('task_17/files/17-1.txt') as f:
 	s = [int(x) for x in f]
 	n = []
-	min_ = min([t for t in s if t % 54 == 0])
-	for i in range(len(s) - 1):
-		if sum([int(j) for j in str(s[i]) if int(j) % 2 == 0]):
-			n.append(s[i] + s[i + 1])
-print(len(n), min(n))
-print('-----------')
-print('123'[1::2])
+	sred = sum(s) / len(s)
+	for i in range(len(s) - 2):
+		triple = s[i:i+3]
+		if ff(triple, lambda x: x < sred) >= 2 and ff(triple, lambda x: '1' in str(x)) == 3:
+			n.append(sum(triple))
+
+
+print(len(n), max(n))
