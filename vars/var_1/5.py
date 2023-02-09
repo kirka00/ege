@@ -11,4 +11,4 @@ for i in range(1000):
     if int(n, 2) >= 26:
         print(i)
         break
-# true
+# 9 - true
