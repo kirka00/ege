@@ -5,21 +5,18 @@
 
 
 with open('files/24-s2.txt') as f:
-	minA = 10 ** 20
-	slovar = {}
-	for line in f:
-		countA = line.count('A')
-		if countA < minA:
-			minA = countA
-			s = line
-	for x in s:
-		if x in slovar:
-			slovar[x] += 1
-		else:
-			slovar[x] = 1
+	s = f.readline()
+	d = {}
+	for i in range(len(s) - 2):
+		if s[i] == 'A' and s[i + 2] == 'C':
+			key = s[i + 1]
+			d[key] = d.get(key, 0) + 1
+	Max = max(d.values())
 	alph = []
-	for y in slovar.items():
-		if max(slovar.values()) == y[1]:
-			alph.append(y[0])
-with open('files/24-s1.txt') as f:
-	print(f.read().count(max(alph)))
+	for v in d.items():
+		if max(d.values()) == v[1]:
+			alph.append((v[0]))
+
+with open('files/24-s2.txt') as f:
+    print(max(alph[0]))
+    print(f.read().count(max(alph[0])))

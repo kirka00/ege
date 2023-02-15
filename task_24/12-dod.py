@@ -1,39 +1,27 @@
 with open('files/24-164.txt') as f:
-    kmax = 0
-    count = 0
-    n = -1
-    for s in f.readlines():
-        count += 1
-        k = 1
-        for i in range(0, len(s) - 1):
-            if s[i] == s[i+1]:
-                k += 1
-                if k > kmax:
-                    kmax = k
-                    n = count
-            else:
-                k = 1
+	MA = 0
+	for s in f:
+		k = 1
+		ma = 0
+		for i in range(len(s)-1):
+			if s[i] == s[i+1]:
+				k += 1
+			else:
+				ma = max(ma,k)
+				k = 1
+		if ma > MA:
+			mi = 1000000000000
+			e=''
+			for p in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ':
+				if s.count(p) <= mi and s.count(p) != 0:
+					mi =s.count(p)
+					e = p
+		MA = ma
+
 
 with open('files/24-164.txt') as f:
-	count = 0
-	a = [0] * 150
-
-	for s in f.readlines():
-		count = count+1
-		if count == n:
-			for i in range(0, len(s)):
-				a[ord(s[i])] += 1
-
-	print(a)
-
-	ch = ''
-	mn = 0
-	for i in range(0, 150):
-		if a[i] > mn:
-			mn = a[i]
-			ch = chr(i)
-
-	print(ch)
-
-with open('files/24-164.txt') as f:
-	print(f.read().count(ch))
+	m = 0
+	for s in f:
+		m = m + s.count(e)
+print(e)
+print(m)
