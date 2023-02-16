@@ -12,11 +12,9 @@ with open('files/24-s2.txt') as f:
 			key = s[i + 1]
 			d[key] = d.get(key, 0) + 1
 	Max = max(d.values())
-	alph = []
 	for v in d.items():
-		if max(d.values()) == v[1]:
-			alph.append((v[0]))
+		if v[1] == Max:
+			print(v[0])
+			print(Max)
 
-with open('files/24-s2.txt') as f:
-    print(max(alph[0]))
-    print(f.read().count(max(alph[0])))
+# T72

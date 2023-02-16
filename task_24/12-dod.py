@@ -9,19 +9,18 @@ with open('files/24-164.txt') as f:
 			else:
 				ma = max(ma,k)
 				k = 1
-		if ma > MA:
-			mi = 1000000000000
-			e=''
-			for p in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ':
-				if s.count(p) <= mi and s.count(p) != 0:
-					mi =s.count(p)
-					e = p
-		MA = ma
-
+if ma > MA:
+	mi = 1000000000000
+	e = ''
+	for p in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ':
+		if s.count(p) <= mi and s.count(p) != 0:
+			mi =s.count(p)
+			e = p
+MA = ma
 
 with open('files/24-164.txt') as f:
 	m = 0
 	for s in f:
-		m = m + s.count(e)
+		m += s.count(e)
 print(e)
 print(m)
