@@ -5,3 +5,6 @@ for w in range(2):
 			for z in range(2):
 				if (x <= y) and z and (not w):
 					print(w, x, y, z)
+
+
+# xzyw - true

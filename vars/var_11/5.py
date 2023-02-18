@@ -10,4 +10,7 @@ for n in range(1, 1000):
 	else:
 		s += 1
 	if int(s, 2) < 64:
-	 	print(int(s, 2))
+	 	print(n)
+
+
+# 15 - true

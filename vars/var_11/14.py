@@ -4,3 +4,6 @@ while x > 0:
 	s = str(x % 4) + s
 	x //= 4
 print(s.count('3'))
+
+
+# 597 - true

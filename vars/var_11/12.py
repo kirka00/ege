@@ -6,3 +6,6 @@ while '2222' in s or '1111' in s:
 		s = s.replace('1111', '22', 1)
 
 print(s)
+
+
+# 22111 - true
