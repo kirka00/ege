@@ -10,7 +10,8 @@ max_ans = []
 for i in range(394441, 394506):
 	if len(f(i)) > len(max_ans):
 		max_ans = f(i)
-print(len(max_ans), max_ans[-2])
+print(max_ans)
+print(len(max_ans), max_ans[-1])
 
 
-# 48 197225
+# 48 394450
