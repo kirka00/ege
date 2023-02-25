@@ -7,15 +7,15 @@ while k != 4:
 			divs.add(d)
 			divs.add(i // d)
 	if len(divs):
-		if sum(divs) // len(divs) % 37 == 23:
+		if sum(divs) % 37 == 23:
 			k += 1
-			print(i, sum(divs) // len(divs))
+			print(i, sum(divs))
 	i += 1
 
 
 '''
-650055 19189
-650062 34618
-650089 11123
-650090 24295
+650031 237008
+650130 1031213
+650160 1968719
+650187 366212
 '''
