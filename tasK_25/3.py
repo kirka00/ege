@@ -1,5 +1,4 @@
 def prost(x):
-	ans = set()
 	for d in range(2, round(x ** 0.5) + 1):
 		if x % d == 0:
 			return False
