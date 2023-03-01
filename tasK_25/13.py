@@ -1,19 +1,27 @@
-def f(x):
-	n = ''
-	while x > 0:
-		n += str(x % 9)
-		x //= 9
-	return n == ''.join(sorted([j for j in n], reverse=True))
+def d(a):
+    b = ''
+    s = 0
+    while a != 0:
+        b = str(a % 9) + b
+        s += a % 9
+        a = a // 9
+    return b, s
 
 
-def f_2(x):
-	n = ''
-	while x > 0:
-		n += str(x % 9)
-		x //= 9
-	return sum([int(q) for q in n])
+for i in range(0, 10):  # ?
+    for j in range(0, 9999):  # *
+        x = f'3{i}458{j}3'
+        c = d(int(x))[0]
+        s = 1
+        for z in range(len(c) - 1):
+            if c[z] < c[z + 1]:
+                s = 0
+                break
+        if s == 1:
+            print(x, d(int(x))[1])
 
-for i in range(304583, 394589993):
-	s = str(i)
-	if s[0] == '3' and s[2:5] == '458' and s[-1] == '3' and f(i):
-		print(i, f_2(i))
+
+'''
+39458583 15
+39458673 17
+'''
