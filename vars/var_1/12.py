@@ -6,3 +6,6 @@ while '211' in s or '112' in s:
 	else:
 		s = s.replace('12', '1', 1)
 print(s)
+
+
+# 121222 - true
