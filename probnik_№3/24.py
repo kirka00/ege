@@ -7,15 +7,15 @@ with open('files/26.txt') as f:
 			slovar[i[0]].append(i[1])
 	maxim = 0
 	for x, y in slovar.items():
-		k = kmax = 1
+		kmax = 0
 		spisok = sorted(set(y))
 		for i in spisok:
-			if spisok[i] + 1 == spisok[i + 1]:
-				k += 1
-				kmax = max(k, kmax)
-			else:
-				k = 1
+			if i % 2 != 0:
+				kmax += 1
 			if kmax >= maxim:
 				maxim = kmax
 				nomer = x
-print(maxim, x)
+print(maxim, nomer)
+
+
+# 17 8437

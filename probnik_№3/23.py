@@ -1,37 +1,50 @@
-for x in range(103_000_000, 104_000_001):
-	ans = set()
-	for d in range(1, round(x ** 0.5) + 1):
-		if x % d == 0 and d % 2:
-			ans.add(d)
-			ans.add(x // d)
-			if len(ans) > 3:
+for i in range(103_000_000, 104_000_001):  # более-менее быстрый алгоритм
+	count = 1
+	sqr = round(i ** 0.5)
+	if i % 2 == 0:
+		for j in range(2, sqr + 1):
+			if i % j == 0:
+				if j % 2 == 0:
+					count += 1
+				if (i // j) % 2 == 0:
+					count += 1
+				if j != 2:
+					k = j
+			if count > 3:
 				break
-	print(ans)
+	if count == 3:
+		print(i, k)
+		count = 1
 
 
+''' Долго считает
 def prost(n):
-	for d in range(2, round(n ** 0.5) + 1):
-		if n % d == 0:
-			return False
-	return True
+	count = 1
+	k = 0
+	for i in range(2, round(n ** 0.5) + 1):
+		if n % i == 0:
+			if i % 2 == 0:
+				count += 1
+			if (n // i) % 2 == 0:
+				count += 1
+			if i != 2:
+				k = i
+		if count > 3:
+			break
+	return count, k
 
-
-primes = set()
-for i in range(3, int(63_000_000**0.25) + 1):
-    if prost(i):
-        primes.add(i)
 
 for i in range(103_000_000, 104_000_001):
-	x = i
-	while x % 2 == 0:
-		x //= 2
-	q4 = int(x ** 0.25)
-	if q4 in primes and q4 ** 4 == x:
-		print(i, x)
-
-
+	f = prost(i)
+	if f[0] == 3:
+		print(i, f[1])
 '''
-63123848 7890481
-66724352 130321
-71639296 279841
+
+
+''' Ответ
+103018658 7177
+103305938 7187
+103478498 7193
+103881698 7207
+103997042 7211
 '''
