@@ -1,13 +1,22 @@
-with open('files/3/27-a.txt') as f:
+with open('files/4/27-4b.txt') as f:
     n = int(f.readline())
-    summa, dmin = 0, 1000000000
+    summa = 0
+    d1, d2, d3, d4 = [], [], [], []
     for i in range(n):
         a, b = map(int, f.readline().split())
-        summa += max(a, b)
+        summa += min(a, b)
         d = abs(a - b)
-        if d % 3 != 0:
-            dmin = min(dmin, d)
-    if summa % 3 != 0:
-        print(summa)
-    else:
-        print(summa - dmin)
+        if d % 5 == 1:
+            d1.append(d)
+        if d % 5 == 2:
+            d2.append(d)
+        if d % 5 == 3:
+            d3.append(d)
+        if d % 5 == 4:
+            d4.append(d)
+    print(summa % 5)
+    print(summa - max(d4))
+    print(summa - (max(d1) + max(d3)))
+
+
+# 69446 203334056
