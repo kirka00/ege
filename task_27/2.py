@@ -1,16 +1,16 @@
 with open('files/dz_2/b.txt') as f:
     n = int(f.readline())
-    summa, dmax = 0, 0
+    summa, dmin = 0, 1000000000
     for i in range(n):
         a, b = map(int, f.readline().split())
         summa += min(a, b)
         d = abs(a - b)
         if d % 3 != 0:
-            dmax = max(dmax, d)
+            dmin = min(dmin, d)
     if summa % 3 != 0:
         print(summa)
     else:
-        print(summa - dmax)
+        print(summa - dmin)
 
 
-# 67089 200157480
+# 66875 200157464
