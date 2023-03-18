@@ -1,16 +1,16 @@
 with open('files/dz_1/b.txt') as f:
-	max7, maxNo7, = 0, 0
+	max6, maxNo6, = 0, 0
 	n = int(f.readline())
 	for i in range(n):
 		a = int(f.readline())
-		if a % 6 != 0 and a > maxNo7:
-			maxNo7 = a
-		if a % 6 == 0 and a > max7:
-			max7 = a
-	if max7 * maxNo7 == 0:
+		if a % 6 != 0 and a > maxNo6:
+			maxNo6 = a
+		if a % 6 == 0 and a > max6:
+			max6 = a
+	if max6 * maxNo6 == 0:
 		print('1')
 	else:
-		print(max7 * maxNo7)
+		print(max6 * maxNo6)
 
 
 # 782040 995004

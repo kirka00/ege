@@ -1,4 +1,4 @@
-with open('files/dz_3/a.txt') as f:
+with open('files/dz_3/b.txt') as f:
     n = int(f.readline())
     summa = 0
     d1, d2, d3, d4 = [], [], [], []
@@ -15,8 +15,8 @@ with open('files/dz_3/a.txt') as f:
         if d % 5 == 4:
             d4.append(d)
     print(summa % 5)
-    print(summa - min(d4))
-    print(summa - (min(d1) + min(d3)))
+    print(summa + min(d4))
+    print(summa + (min(d1) + min(d3)))
 
 
-# 73878 203343854
+# 75996 203343862

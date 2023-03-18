@@ -10,7 +10,7 @@ with open('files/dz_2/b.txt') as f:
     if summa % 3 != 0:
         print(summa)
     else:
-        print(summa - dmin)
+        print(summa + dmin)
 
 
-# 66875 200157464
+# 67303 200157496
