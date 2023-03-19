@@ -1,4 +1,4 @@
-with open('files/dz_4/a.txt') as f:
+with open('files/dz_4/b.txt') as f:
 	n = int(f.readline())
 	B, D = 10, 6
 	dmin = 10 ** 10
@@ -10,11 +10,11 @@ with open('files/dz_4/a.txt') as f:
 		r = d % B
 		if r != 0:
 			dmin = min(d, dmin)
-	if s % B != 0:
+	if s % B != D:
 		print(s)
 	else:
 		print(s, s % B, dmin)
 		print(s + dmin)
 
 
-# 7956 19596656
+# 8015 19596697
