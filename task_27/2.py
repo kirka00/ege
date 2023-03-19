@@ -1,6 +1,6 @@
-with open('files/dz_2/b.txt') as f:
+with open('files/dz_2/a.txt') as f:
     n = int(f.readline())
-    summa, dmin = 0, 1000000000
+    summa, dmin = 0, 10 ** 10
     for i in range(n):
         a, b = map(int, f.readline().split())
         summa += min(a, b)

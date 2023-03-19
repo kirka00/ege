@@ -1,17 +1,25 @@
 with open('files/dz_5/b.txt') as f:
 	n = int(f.readline())
-	data = [int(i) for i in f]
-	minim = 10 ** 10
-	minim1, minim2, minim3 = [0] * 4, [0] * 4, [0] * 4
-	for i in data:
-		ostat = i % 4
-		minim = min(minim, i + minim3[(4 - ostat) % 4])
-		for d in range(4):
-			ostat0 = (d + ostat) % 4
-			minim3[ostat0] = min(minim3[ostat0], minim2[d] + i)
-			minim2[ostat0] = min(minim2[ostat0], minim1[d] + i)
-		minim1[ostat] = min(minim1[ostat], 	i)
-print(minim)
+	x = []
+	for i in range(n):
+		x.append(int(f.readline()))
+	mi1, mi2, mi3 = [10 ** 10] * 4, [10 ** 10] * 4, [10 ** 10] * 4
+	mi = 10 ** 10
+	for i in range(n):
+		d = x[i] % 4
+		mi = min(mi, x[i] + mi3[(4 - d) % 4])
+		mi3nov = mi3
+		for k in range(4):
+			d0 = (k + d) % 4
+			mi3nov[d0] = min(mi3[d0], mi2[k] + x[i])
+		mi3 = mi3nov
+		mi2nov = mi2
+		for k in range(4):
+			d0 = (k + d) % 4
+			mi2nov[d0] = min(mi2[d0],  mi1[k] + x[i])
+		mi2 = mi2nov
+		mi1[d] = min(mi1[d], x[i])
+	print(mi)
 
 
-# 206 100278
+# 1320 404632

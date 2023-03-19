@@ -1,22 +1,26 @@
 with open('files/dz_3/b.txt') as f:
     n = int(f.readline())
-    summa = 0
-    d1, d2, d3, d4 = [], [], [], []
+    D = 5
+    s, dmin = 0, [10 ** 10] * D
     for i in range(n):
         a, b = map(int, f.readline().split())
-        summa += min(a, b)
+        s += min(a, b)
         d = abs(a - b)
-        if d % 5 == 1:
-            d1.append(d)
-        if d % 5 == 2:
-            d2.append(d)
-        if d % 5 == 3:
-            d3.append(d)
-        if d % 5 == 4:
-            d4.append(d)
-    print(summa % 5)
-    print(summa + min(d4))
-    print(summa + (min(d1) + min(d3)))
+        r = d % D
+        if r > 0:
+            dminnov = dmin[:]
+            for k in range(1, D):
+                r0 = (r + k) % D
+                dminnov[r0] = min(d + dmin[k], dminnov[r0])
+            dminnov[r] = min(d, dminnov[r])
+            dmin = dminnov[:]
+        if s % D == 0:
+            print(s)
+        else:
+            print(s, s % D)
+            print(dmin)
+            print(s + dmin[D - s % D])
 
 
-# 75996 203343862
+
+# 75960 203343860
