@@ -1,4 +1,4 @@
-'''with open('files/dz_7/a.txt') as f:
+with open('files/dz_7/a.txt') as f:
     n = int(f.readline())
     s = [int(i) for i in f]
     count = 0
@@ -8,7 +8,7 @@
             peoizv *= s[j]
             if peoizv % 524288 != 0:
                 count += 1
-print(count)'''
+print(count)
 
 
 def prost(a):
