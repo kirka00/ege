@@ -1,4 +1,4 @@
-ё# 19
+# 19
 def f(x, y, p):
     if x + y >= 69 and p > 2:
         return p == 2
