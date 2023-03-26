@@ -11,31 +11,27 @@ with open('files/dz_7/a.txt') as f:
 print(count)
 
 
-def prost(a):
-    for d in range(2, int(a ** 0.5) + 1):
-        if a % d == 0:
-            return False
-    return True
-
-
-divs = []
-for i in range(2, int(524288 ** 0.5) + 1):
-    if 524288 % i == 0 and prost(i):
-        divs.append(i)
-print(divs)  # [2]
-
-with open('files/dz_7/a.txt') as f:
+with open('files/dz_7/b.txt') as f:
     n = int(f.readline())
-    count = k = 0
-    data = [int(i) for i in f]
-    dic = {2: 0}
-    for i in data:
-        k += 1
-        for d1, d2 in dic.items():
-            if i % d1 == 0:
-                dic[d1] = k
-        count += k - min(dic.values())
-print(count)
+    m = 524_288
+    k, i, d, ans = {}, 2, {}, 0
+    while m > 1:
+        while m % i == 0:
+            k[i] = k.get(i, 0) + 1
+            m //= i
+        i += 1
+    print(k)
+    for i in k:
+        d[i] = [0] * k[i]
+    for i in range(1, n + 1):
+        num = int(f.readline())
+        for j in d:
+            while num % j == 0:
+                d[j].pop(0)
+                d[j].append(i)
+                num //= j
+        ans += i - min(min(d.values()))
+print(ans)
 
 
-# 1118 206138
+# 18871 3921243
