@@ -7,9 +7,9 @@ def f(x):
 
 
 for i in range(250_201, 255_500):
-	w = f(i)
-	if w:
-	    s = max(w) + min(w)
-	if s % 123 == 17:
-		print(i, s)
+    w = f(i)
+    if w:
+        s = max(w) + min(w)
+    if s % 123 == 17:
+        print(i, s)
 
