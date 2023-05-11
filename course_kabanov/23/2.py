@@ -6,7 +6,7 @@ def f(x):
 	return sorted(ans)
 
 
-for i in range(174457, 174505):
+for i in range(81234, 134690):
 	w = f(i)
-	if len(w) == 2:
-		print(w[0], w[1])
+	if len(w) == 3:
+		print(w[0], w[1], w[2])

@@ -6,7 +6,10 @@ def f(x):
 	return sorted(ans)
 
 
-for i in range(174457, 174505):
+for i in range(250_201, 255_500):
 	w = f(i)
-	if len(w) == 2:
-		print(w[0], w[1])
+	if w:
+	    s = max(w) + min(w)
+	if s % 123 == 17:
+		print(i, s)
+

@@ -6,7 +6,8 @@ def f(x):
 	return sorted(ans)
 
 
-for i in range(174457, 174505):
-	w = f(i)
-	if len(w) == 2:
-		print(w[0], w[1])
+for i in range(150_001, 151_100):
+	s = sum(f(i))
+	if s % 13 == 10:
+		print(i, s)
+
