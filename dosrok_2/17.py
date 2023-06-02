@@ -1,6 +1,3 @@
-
-
-
 with open('files/17.txt') as f:
     s = [int(x) for x in f]
     ans = []
