@@ -1,4 +1,4 @@
-with open('files/17-1.txt') as f:
+with open('files/17.txt') as f:
 	s = [int(x) for x in f]
 	min_ = min([i for i in s if i > 0 and i & 15 == 0])
 	ans = []

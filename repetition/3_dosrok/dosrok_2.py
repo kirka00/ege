@@ -1,0 +1,1 @@
+# разбор досрока (2 варианта - https://kompege.ru/variant?kim=25023719)
