@@ -1,12 +1,9 @@
-from functools import lru_cache
+s = 3000 * [1]
+for n in range(len(s), 1, -1):
+    if n < 2222:
+        s[n] = n ** 3 + s[n + 2]
+
+print(s[4] - s[10])
 
 
-@lru_cache()
-def f(n):
-    if n >= 2222:
-        return n
-    else:
-        n ** 3 + f(n + 2)
-        
-
-print(f(4) - f(10))
+# 792
