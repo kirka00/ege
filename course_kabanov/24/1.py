@@ -1,7 +1,6 @@
-f = open("files/1.txt")
-S, N = map(int, f.readline().split())
-
-f1 = sorted(map(int, f), reverse=True)
+with open("files/1.txt") as f:
+    S, N = map(int, f.readline().split())
+    f1 = sorted(map(int, f), reverse=True)
 
 save_files = []
 for i in f1:

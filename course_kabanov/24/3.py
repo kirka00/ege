@@ -1,6 +1,6 @@
-f = open("files/3.txt")
-N, M = map(int, f.readline().split())
-f1 = sorted(map(int, f))
+with open("files/3.txt") as f:
+	N, M = map(int, f.readline().split())
+	f1 = sorted(map(int, f))
 
 
 files, flag = [], True

@@ -1,7 +1,6 @@
-f = open("files/1.txt")
-S, N = map(int, f.readline().split())
-
-f1 = sorted(map(int, f))
+with open("files/1.txt") as f:
+	S, N = map(int, f.readline().split())
+	f1 = sorted(map(int, f))
 flag = True
 save_files = []
 while True:
@@ -20,6 +19,5 @@ while True:
 		else:
 			break
 
-print(save_files)
-
+#print(save_files)
 print(len(save_files), save_files[-1])

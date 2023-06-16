@@ -1,6 +1,6 @@
-f = open("files/2.txt")
-D, E, N = map(int, f.readline().split())
-f1 = sorted(map(int, f))
+with open("files/2.txt") as f:
+	D, E, N = map(int, f.readline().split())
+	f1 = sorted(map(int, f))
 
 
 d_files, e_files = [], []
